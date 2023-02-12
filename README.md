@@ -84,6 +84,21 @@ First, make a utility that can iterate all of the controls in the Form, but also
         });
     }
 
+***
+**Testing**
+
+    // FOR TESTING PURPOSES
+    int _id = 1;
+    private void onClickNew(object sender, EventArgs e)
+    {
+        flowLayoutPanel.Controls.Add(new TextBox
+        {
+            Name = $"dynamicTextBox{_id}",
+            PlaceholderText = $"TextBox{_id}",
+        });
+        _id++;
+    }
+
 
   [1]: https://i.stack.imgur.com/VdLeU.png
   [2]: https://i.stack.imgur.com/LMNdC.png
