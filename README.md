@@ -27,9 +27,9 @@ First, make a utility that can iterate all of the controls in the Form, but also
 ***
 **Attach existing**
 
-[![design-time-click][2]][2]
+Using this utility, initialize any textboxes added in design mode to route to the click handler.
 
-    Initialize any textboxes that were added in design mode to rout to the click handler.
+[![design-time-click][2]][2]
 
     public partial class MainForm : Form
     {
@@ -61,10 +61,9 @@ First, make a utility that can iterate all of the controls in the Form, but also
 ***
 **Attach new**
 
+Iterate a second time to attach the `ControlAdded` event to every control. This way, new `TextBox` instances can be detected in order to attach the `Click` event.
 
 [![runtime click][1]][1]
-
-    Iterate a second time to attach the `ControlAdded` event to every control. This way, new `TextBox` instances can be detected in order to attach the `Click` event.
 
     public MainForm()
     {
@@ -98,7 +97,6 @@ First, make a utility that can iterate all of the controls in the Form, but also
         });
         _id++;
     }
-
 
   [1]: https://i.stack.imgur.com/VdLeU.png
   [2]: https://i.stack.imgur.com/LMNdC.png
